@@ -13,7 +13,6 @@ var common = {
 	output:{
 		path: path.resolve(ROOT_PATH, 'build'),
 		filename: 'bundle.js'
-
 	},
 	 module: {
     loaders: [
@@ -39,7 +38,7 @@ if(TARGET === 'start' || !TARGET) {
     	loaders:[
     	{
     		test: /\.jsx?$/,
-    		loaders:['babel'],
+    		loaders:['react-hot', 'babel'],
     		include: path.resolve(ROOT_PATH, 'app')
 
     		}
